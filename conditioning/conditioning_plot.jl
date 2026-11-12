@@ -8,11 +8,12 @@ plotfont="Computer Modern"
 
 default(;
     # dpi=300,
-    size=(600,300),
+    size=(800,250),
     thickness_scaling = 1.5,
     linewidth=2,
     left_margin = -2mm,
-    bottom_margin = 0mm,
+    bottom_margin = 3mm,
+    top_margin= 0mm,
     legendfont=plotfont,
     fontfamily=plotfont,
     right_margin=-7mm,
@@ -79,7 +80,7 @@ p = plot(;
     yaxis=:log10,
     xaxis=:log2,
     xticks=number_of_points .- 1,
-    ylabel="condition number \$c\$",
+    ylabel="condition # \$c\$",
     xlabel="problem size (# of points)",
     legend=:right,
     ylims=[1,4e21],
