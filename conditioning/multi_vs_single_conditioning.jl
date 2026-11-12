@@ -187,9 +187,9 @@ with triangle inequality. We rewrite opnorm(A'*A) == opnorm(A*A'), because A*A' 
 make_step_size(; A, Δt, λ, scale=1) = 1 / (opnorm(Symmetric(A*A')) + 4λ/Δt^3/scale_to_skip(scale))
 
 """
-Makes a basis for the subspace parallel to the k-simplex in R^(k+1)
+Makes a basis for the subspace parallel to the (k-1)-simplex in R^k
 
-Returns a matrix of size (k+1, k).
+Returns a matrix of size (k, k-1).
 """
 function make_orthonormal_basis_perp_ones(k)
     t = 2π*((0:(k-1))/k .- 0.5)
